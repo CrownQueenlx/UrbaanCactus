@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
     <ProjectReference Include="..\Urban.Services\Urban.Services.csproj" />
@@ -10,6 +10,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>65b31490-ee45-4065-b5c2-03e338b663b0</UserSecretsId>
   </PropertyGroup>
 
 </Project>
