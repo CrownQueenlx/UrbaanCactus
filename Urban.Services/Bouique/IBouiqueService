@@ -1,0 +1,13 @@
+using system;
+using Microsoft.EntityFrameworkCore;
+
+namespace Urban.Services;
+
+public interface IBoutiqueService
+{
+    Task<bool?> GetBoutiquesAsync(int model);
+    Task<List<BoutiqueList>> GetBoutiquesListAsync();
+    Task<IAsyncResult> CreateBoutiqueAsync(BoutiqueEntity model);
+    Task<bool> UpdateBoutiqueAsync(BoutiqueEntity model);
+    Task<bool> DeleteBoutiqueAsync(BoutiqueEntity model);
+}

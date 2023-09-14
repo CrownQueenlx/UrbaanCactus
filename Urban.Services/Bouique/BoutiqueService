@@ -1,0 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+
+namespace Urban.Services;
+public class BoutiqueService : IBoutiqueService
+{
+    
+}

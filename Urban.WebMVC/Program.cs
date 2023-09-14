@@ -1,6 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using Urban
+
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
+builder.Services.AddScoped<IBoutiqueService, BoutiqueService>();
+// builder.Services.AddScoped<IItemService, IItemService>();
+// builder.Services.AddScoped<IProductService, ProductService>();
+// builder.Services.AddScoped<IProductTypesService, ProductTypesService>();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
