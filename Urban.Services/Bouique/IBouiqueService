@@ -1,5 +1,7 @@
 using system;
 using Microsoft.EntityFrameworkCore;
+using Urban.Data.Entities;
+using Urban.Models;
 
 namespace Urban.Services;
 

@@ -1,10 +1,18 @@
 using Microsoft.EntityFrameworkCore;
-using Urban
+using Microsoft.Extensions.Options;
+using Urban.WebMVC.Data;
+using Urban.Services.BoutiqueService;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 // Add services to the container.
+// DbContext configuration, adds the DbContext for the dependency injection
+var connectionString = builder.Configuration.GetConnectionString("UrbanCactus");
+builder.Services.AddDbContext<UrbanCactusContext>(Options =>
+{
+    Options.UseSqlServer(connectionString);
+});
 builder.Services.AddScoped<IBoutiqueService, BoutiqueService>();
 // builder.Services.AddScoped<IItemService, IItemService>();
 // builder.Services.AddScoped<IProductService, ProductService>();
